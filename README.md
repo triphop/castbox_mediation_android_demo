@@ -1,2 +1,2 @@
-# castbox_mediation_android_demo
-android demo project using guru mediation sdk
+# guru_mediation_sdk_for_android
+Android project to demonstrate how to play with **Guru mediation sdk for android**

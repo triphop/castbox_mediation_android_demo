@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Publisher</string>
+    <string name="action_settings">Settings</string>
+    <string name="ad_banner">Banner Ad</string>
+    <string name="ad_interstitial">Interstitial Ad</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- buttons -->
+    <string name="button_load_ad">Load Ad</string>
+    <string name="button_load_interstitial_ad">Load Interstitial Ad</string>
+    <string name="button_load_ad_via_layout">Load Banner Ad via layout</string>
+    <string name="button_load_ad_via_dynamic">Load Banner Ad dynamically</string>
+</resources>

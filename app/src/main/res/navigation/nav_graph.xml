@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="merge.blocks.drop.number.puzzle.games.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_bannerFragment"
+            app:destination="@id/bannerFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_interstitialFragment"
+            app:destination="@id/interstitialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bannerFragment"
+        android:name="merge.blocks.drop.number.puzzle.games.BannerFragment"
+        android:label="@string/ad_banner"
+        tools:layout="@layout/fragment_banner" />
+    <fragment
+        android:id="@+id/interstitialFragment"
+        android:name="merge.blocks.drop.number.puzzle.games.InterstitialFragment"
+        android:label="@string/ad_interstitial"
+        tools:layout="@layout/fragment_interstitial_ad" />
+</navigation>
