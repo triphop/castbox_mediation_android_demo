@@ -1,6 +1,5 @@
 package merge.blocks.drop.number.puzzle.games;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -11,13 +10,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import fm.castbox.mediation.error.AdError;
-import fm.castbox.mediation.helper.Scheduler;
 import fm.castbox.mediation.interstitial.InterstitialAd;
-import fm.castbox.mediation.widget.AdView;
 import merge.blocks.drop.number.puzzle.games.databinding.FragmentInterstitialAdBinding;
 
 public class InterstitialFragment extends Fragment {
@@ -25,7 +21,7 @@ public class InterstitialFragment extends Fragment {
 
     private FragmentInterstitialAdBinding binding;
     private Handler handler;
-    private InterstitialAd interstitialAd;
+        private InterstitialAd interstitialAd;
 
     @Nullable
     @Override
@@ -86,6 +82,7 @@ public class InterstitialFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        interstitialAd.destroy();
+        if (null != interstitialAd) interstitialAd.destroy();
+        interstitialAd = null;
     }
 }

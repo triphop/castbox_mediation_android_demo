@@ -61,6 +61,14 @@ public class BannerFragment extends Fragment {
                     @Override
                     public void onInventoryReady() {
                         Log.d(TAG, "ad inventory ready");
+
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getContext(), "static ad is shown", Toast.LENGTH_SHORT).show();
+                                adView.showAd(getActivity());
+                            }
+                        });
                     }
 
                     @Override
@@ -81,13 +89,6 @@ public class BannerFragment extends Fragment {
 
                 binding.adBannerContainer.addView(adView);
                 adView.loadAd();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(getContext(), "static ad is shown", Toast.LENGTH_SHORT).show();
-                        adView.showAd(getActivity());
-                    }
-                }, 2000);
 
             }
         });
@@ -142,8 +143,6 @@ public class BannerFragment extends Fragment {
                     });
 
                     adView.loadAd();
-
-
 
                 } catch (Exception e) {
                     e.printStackTrace();
